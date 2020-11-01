@@ -1,0 +1,74 @@
+body {
+    background-color: #ffe4c2;
+    color: #4c6770;
+}
+
+#failed {
+    margin-top: -20px;
+    color: red;
+}
+
+#message {
+    font-size: 20px;
+    background-color: #d4e7ee;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    width: 60%;
+    padding: 50px;
+    border: 10px groove #849da2;
+}
+
+button {
+    color: #4c6770;
+    width: 20%;
+    border: 2px solid #849da2;
+    border-radius: 2px;
+    background-color: #eef4ff;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #d4e7ee;
+    background-color: #849da2;
+    border-color: #4c6770;
+}
+
+input {
+    width: 40%;
+    text-align: center;
+    background-color: #eccfa3;
+    border: 2px solid #d8ad82;
+    border-radius: 2px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    font-weight: bold;
+    color: #4c6770;
+    outline: none;
+}
+
+input::placeholder {
+    color: #4c6770;
+    font-weight: bold;
+}
+
+#success {
+    background-color: #68be36;
+}
+
+.congratulations {
+    text-align: center;
+    color: #ffffff;
+}
+
+#successTitle {
+    font-size: 50px;
+}
+
+#successParagraph {
+    margin-top: -30px;
+    font-size: 20px;
+}

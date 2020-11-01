@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mqu-rpg
+  labels:
+    category: pwn
+    challenge: mqu-rpg
+spec:
+  type: LoadBalancer
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+      clientIP:
+          timeoutSeconds: 3600
+  ports:
+    - name: "mqu-rpg-port"
+      port: 1337
+      targetPort: 1337
+  selector:
+    category: pwn
+    challenge: mqu-rpg

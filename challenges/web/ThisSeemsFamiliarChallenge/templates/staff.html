@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CTF</title>
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+<header>
+    <img src="https://papers.ssrn.com/sol3/journalcovers/2959078_25904.gif" id="mq">
+</header>
+
+<body>
+  <div class="heading">
+    <h1> iTeach Login </h1>
+  </div>
+    <div class="loginContainer">
+        <div class="container" id="left">
+            {% if  failed == 1 %}
+            <div id="failed" style="display: block;">
+            {% else %}
+            <div id="failed" style="display: none;">
+            {% endif %}
+                Oops! That didn't work, please try again.
+            </div>
+            <form name="form" action="" method="post">
+            <label for='username' >UserName:</label>
+            <input type='text' name='username' placeholder="Enter StaffId" id='username'  maxlength="50" />
+
+            <label for='password' >Password:</label>
+            <input type='password' name='password' placeholder="Enter Password" id='password' maxlength="50" />
+
+            <button id="login" type="submit">Log in</button>
+            </form>
+
+            <form action="studLogin" method="post">
+            <button id="staff" type="submit"> Click here if you are a Student </button>
+            </form>
+        </div>
+        <div class="container" id="right">
+            <img src="static/digital.png" id="logo2">
+            <h2> Teach digital, learn digital </h2>
+            <h2 id="line2"> We are moving our learning online to make sure we have a safe and successful semester. Giving everyone the best experience</h2>
+            <div id="hint">
+            <h3> Want a hint? </h3>
+            </div>
+            <div id="popup">
+            <p>An SQL query walks into a bar... and joins two tables</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

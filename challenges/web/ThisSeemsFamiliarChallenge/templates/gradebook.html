@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CTF</title>
+  <link href="static/style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<header>
+  <div class="banner">
+    <img id="smallmq" src="https://papers.ssrn.com/sol3/journalcovers/2959078_25904.gif">
+    <p id="smalluser">{{ currentUser }}</p>
+    <form action="staffHome" method="post">
+      <button class="logout" id="leftButton" type="submit"> Home </button>
+    </form>
+    <form action="logout" method="get">
+      <button class="logout" id="rightButton" type="submit"> Logout </button>
+    </form>
+    <h1 id="ilearn"><span id="i"> i</span>Learn </h1>
+  </div>
+</header>
+
+<body>
+<div class="homecontainer" id="user">
+  <h1 id="name"> Comp3850 Computing Industry Project</h1>
+</div>
+
+<div class="homecontainer" id="subjects">
+  <div class="title">
+    <b>Student Grades</b>
+    <div class="subjectlist">
+        <p id="description">Click on the Student ID to edit the grade</p>
+        <table>
+            <tr>
+                <th>Student ID</th>
+                <th>Assignment 1</th>
+                <th>Assignment 2</th>
+                <th>Case Study</th>
+                <th>Final Exam</th>
+                <th>Current Total</th>
+            </tr>
+            <tr>
+                <td class="editGrade" id="editGrade0">45938744</td>
+                <td>8/10</td>
+                <td>22/25</td>
+                <td>34/35</td>
+                <td>{{ grade1 }}</td>
+                <td><b>64/100</b></td>
+            </tr>
+            <tr>
+                <td class="editGrade" id="editGrade1">45678909</td>
+                <td>1/10</td>
+                <td>0/25</td>
+                <td>13/35</td>
+                <td>{{ grade2 }}</td>
+                <td><b>14/100</b></td>
+            </tr>
+            <tr>
+                <td class="editGrade" id="editGrade2">44863912</td>
+                <td>6/10</td>
+                <td>23/25</td>
+                <td>24/35</td>
+                <td>{{ grade3 }}</td>
+                <td><b>53/100</b></td>
+            </tr>
+            <tr>
+                <td class="editGrade" id="editGrade3">45085784</td>
+                <td>5/10</td>
+                <td>20/25</td>
+                <td>31/35</td>
+                <td>{{ grade4 }}</td>
+                <td><b>56/100</b></td>
+            </tr>
+        </table>
+    </div>
+  </div>
+</div>
+<div class="homecontainer" id="advert">
+  <img src="static/peter.png" id="logo">
+  <h2><b> Professor Peter Mac </b></h2>
+  <h3>Email: Peter.Mac@technology.mq.edu.au</h3>
+  <h3>Staff id: 98765432</h3>
+</div>
+
+<div class="popup" id="popup">
+    <div class="editGradesPopup">
+        <p><b>Enter password for {{ currentUser }}</b></p>
+        <a href="/passwordSpecifications" target="_blank" class="passwordInfo">Password Information</a>
+        <form name="flag" method="post">
+            <input name="flagPassword" placeholder="Enter answer here" id="flagPassword">
+            <br><br><button id="flagSubmit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+<script>
+    var popup = document.getElementById("popup");
+    var button = document.getElementById("editGrade0");
+
+    button.onclick = function() {
+        popup.style.display = "block";
+    }
+
+    var button = document.getElementById("editGrade1");
+
+    button.onclick = function() {
+        popup.style.display = "block";
+    }
+
+    var button = document.getElementById("editGrade2");
+
+    button.onclick = function() {
+        popup.style.display = "block";
+    }
+
+    var button = document.getElementById("editGrade3");
+
+    button.onclick = function() {
+        popup.style.display = "block";
+    }
+</script>
+
+</html>

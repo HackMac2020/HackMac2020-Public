@@ -1,0 +1,3 @@
+# - Ever try Stegcracker ? or just opening files with text editor?
+# - Try checking file metadata aswell.
+# - Most hints are in the metadata aswell.

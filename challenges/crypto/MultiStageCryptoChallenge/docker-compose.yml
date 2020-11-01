@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    environment:
+      - "WORKER_PORT=1337"
+    ports:
+      - "1337:1337"

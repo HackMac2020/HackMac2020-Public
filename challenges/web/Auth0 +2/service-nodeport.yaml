@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: web
+  name: jwt2-web-service
+spec:
+  type: NodePort
+  ports:
+  - name: "jwt2-nodeport"
+    port: 1337
+    targetPort: 1337
+    nodePort: 30104
+  selector:
+    category: web
+    challenge: jwt2

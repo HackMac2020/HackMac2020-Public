@@ -1,0 +1,28 @@
+			!!!FOR MY EYES ONLY!!!
+		MWUAH HAH HAH HAH HAH (EVIL LAUGH!)
+(gdb) info reg
+rax            0x3	3
+rbx            0x1	1
+rcx            0xf	15
+rdx            0x16	22
+rsi            0x0	0
+rdi            0x3	3
+rbp            0x4024a0	0x4024a0 <hack3r>
+rsp            0x7fffffffe378	0x7fffffffe378
+r8             0x0	0
+r9             0x0	0
+r10            0x7ffff7b82f20	140737349431072
+r11            0x4025b6	4203958
+r12            0x400ea0	4198048
+r13            0x7fffffffe490	140737488348304
+r14            0x0	0
+r15            0x0	0
+rip            0x401237	0x401237 <solv_3>
+eflags         0x206	[ PF IF ]
+cs             0x33	51
+ss             0x2b	43
+ds             0x0	0
+es             0x0	0
+fs             0x0	0
+gs             0x0	0
+(gdb) 

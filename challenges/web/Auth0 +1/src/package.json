@@ -1,0 +1,24 @@
+{
+    "name": "jwt",
+    "version": "1.0.0",
+    "description": "Simple JWT challenge where the server supports the `none` signing algorithm. This allows the user to change their JWT and sign in as admin by changing the username field.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon index.js",
+        "prod": "node index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cookie-parser": "^1.4.5",
+        "express": "^4.17.1",
+        "express-jwt": "^6.0.0"
+    },
+    "devDependencies": {
+        "morgan": "^1.10.0",
+        "node-fetch": "^2.6.0",
+        "nodemon": "^2.0.4"
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+
+  <title>CTF</title>
+</head>
+<header>
+  <div class="banner">
+    <img id="smallmq" src="https://papers.ssrn.com/sol3/journalcovers/2959078_25904.gif">
+    <p id="smalluser">{{ currentUser }}</p>
+    <form action="home" method="post">
+      <button class="logout" id="leftButton" type="submit"> Home </button>
+    </form>
+    <form action="logout" method="get">
+      <button class="logout" id="rightButton" type="submit"> Logout </button>
+    </form>
+    <h1 id="ilearn"><span id="i"> i</span>Learn </h1>
+  </div>
+</header>
+
+<body>
+  <div class="homecontainer" id="user">
+    <img id="avatar" src="https://www.clipartkey.com/mpngs/m/126-1261738_computer-icons-person-login-anonymous-person-icon.png">
+    <h1 id="name">{{ currentUser }}</h1>
+  </div>
+
+  <div class="homecontainer" id="subjects">
+    <h1 id="hometitle"> iLearn: My Home </h1>
+    <div class="title">
+        <b>Subject List:</b>
+      <div class="subjectlist">
+        <a href="comp3850" id="subjectlink"> COMP3850 Computing Industry Project </a>
+      </div>
+    </div>
+  </div>
+  <div class="homecontainer" id="advert">
+    <img src="static/sunrise.png" id="logo2">
+    <h2><b> Quote of the day </b></h2>
+    <h2 id="line2"> Education is the most powerful weapon which you can use to change the world” – Nelson Mandela</h2>
+  </div>
+</body>
+
+</html>

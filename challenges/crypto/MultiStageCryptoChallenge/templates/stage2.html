@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF</title>
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="message">
+        <div class="container" id="left">
+            {% if  failed == 1 %}
+                <div id="failed" style="display: block;">
+            {% else %}
+                <div id="failed" style="display: none;">
+            {% endif %}
+            That wasn't it, try again!
+        </div>
+        <p><b>Welcome to Stage 2!</b><br>
+            <i>Don't forget to make note of your answer...</i></p>
+        <p>Ciphertext is: <b><br>._ _ _ / ._ / _ _ / ._ / .. / _._. / ._</b></p>
+        <form action="" method="POST">
+            <input name="answer" id="answer" placeholder="Enter your answer here"><br>
+            <button type="submit"><b>Submit</b></button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+    web:
+      image: gcr.io/hackmac-challenges-2020-13337/jwt
+      restart: unless-stopped
+      ports:
+        - "1337:1337"

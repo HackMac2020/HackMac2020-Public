@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: web
+    challenge: this-seems-familiar
+  name: this-seems-familiar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: web
+      challenge: this-seems-familiar
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        category: web
+        challenge: this-seems-familiar
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - name: db
+        image: mysql:8.0.21
+        resources:
+          limits:
+            cpu: 100m
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        args: ["--default-authentication-plugin=mysql_native_password"]
+        env:
+        - name: MYSQL_DATABASE
+          value: logindetails
+        - name: MYSQL_ROOT_PASSWORD
+          value: adjfhufhwuihejhfwhqfouwhohf
+        imagePullPolicy: Always
+        volumes: null
+
+      - name: web
+        image: gcr.io/hackmac-challenges-2020-13337/this-seems-familiar:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            cpu: 100m
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        labels:
+        volumes: null
+        env:
+        - name: MYSQL_DB
+          value: logindetails
+        - name: MYSQL_HOST
+          value: 127.0.0.1
+        - name: MYSQL_PASSWORD
+          value: adjfhufhwuihejhfwhqfouwhohf
+        - name: MYSQL_USER
+          value: root
+        - name: WORKER_PORT
+          value: "8000"

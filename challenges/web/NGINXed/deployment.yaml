@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: web
+    challenge: nginxed
+  name: nginxed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: web
+      challenge: nginxed
+  template:
+    metadata:
+      labels:
+        category: web
+        challenge: nginxed
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - image: gcr.io/hackmac-challenges-2020-13337/nginxed:latest
+        imagePullPolicy: Always
+        name: nginxed-web
+        ports:
+        - containerPort: 1337
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+      restartPolicy: Always
+      serviceAccountName: ""

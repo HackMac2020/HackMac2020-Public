@@ -1,0 +1,80 @@
+body {
+    margin-top: 50px;
+    text-align: center;
+    background-color: black;
+    color: #00ff00;
+}
+
+#heading {
+    font-size: 40px;
+}
+
+input {
+    background-color: #127110;
+    color: white;
+    border: 2px solid #02bd00;
+    width: 30%;
+    padding: 5px;
+}
+
+input::placeholder {
+    color: white;
+    text-align: center;
+}
+
+input:focus {
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #02bd00;
+    color: white;
+    border: 2px solid #127110;
+    border-radius: 5px;
+    padding: 5px;
+    width: 7%;
+}
+
+button:hover {
+    cursor: pointer;
+    border-color: #02bd00;
+}
+
+#wanthint {
+    margin-top: 50px;
+    cursor: pointer;
+    width: 10%;
+    margin-left: 570px;
+}
+
+#hint {
+    display: none;
+    background-color: #00ff00;
+    color: black;
+    width: 20%;
+    margin-left: 500px;
+    margin-top: -10px;
+}
+
+#wanthint:hover + #hint {
+    display: block;
+}
+
+#success {
+    background-color: #68be36;
+}
+
+.congratulations {
+    text-align: center;
+    color: #ffffff;
+}
+
+#successTitle {
+    font-size: 50px;
+}
+
+#successParagraph {
+    margin-top: -30px;
+    font-size: 20px;
+}

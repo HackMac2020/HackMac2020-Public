@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ok-boomer-tcp-service
+spec:
+  type: NodePort
+  ports:
+  - name: "ok-boomer-nodeport"
+    port: 1337
+    targetPort: 1337
+    nodePort: 30002
+  selector:
+    category: rev
+    challenge: ok-boomer

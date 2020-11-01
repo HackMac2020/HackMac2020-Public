@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+}
+  
+html {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #efede7;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 34%;
+    padding: 20px;
+}
+
+.welcome {
+    background-color: #ffffff;
+    width: 60%;
+    height: 75%;
+    border-radius: 5px;
+    border: 1px solid #dcd0c0;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#welcomeMessage {
+    /* width: 90%; */
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+#continue {
+    justify-content: center;
+    background-color: #a6192e;
+    padding: 10px;
+    width: 30%;
+    border-radius: 5px;
+    color: #ffffff;
+    border: 1px solid #d06a60;
+    margin-bottom: 10px;
+}
+
+#continue:hover {
+    background-color: #d6001c;
+    cursor: pointer;
+}
+
+#mq {
+    margin-left: 150px;
+    width: 250px;
+}
+
+.heading {
+    color: #212529;
+    margin-left: 150px;
+    margin-bottom: -10px;
+    font-size: 20px;
+}
+
+#left {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 16px;
+    float: left;
+}
+
+#failed {
+    background-color: #f8d7da;
+    color: #7c3035;
+    width: 90%;
+    padding: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+label {
+    color: #505157;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#username, #password {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #dadfe3;
+    display: flex;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+#username:focus, #password:focus {
+    outline-color: #a6192e;
+    outline-width: thin;
+    border-style: 2px solid;
+    border-color: rgba(214, 0, 28, .5);
+    margin-bottom: 36px;
+}
+
+#login {
+    background-color: #a6192e;
+    padding: 10px;
+    width: 98%;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -10px;
+    border: 1px solid #d06a60;
+}
+
+#login:hover {
+    background-color: #d6001c;
+    cursor: pointer;
+}
+
+#staff {
+    background-color: #a6192e;
+    padding: 10px;
+    width: 70%;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 15%;
+    border: 1px solid #d06a60;
+}
+
+#staff:hover {
+    background-color: #d6001c;
+    cursor: pointer;
+}
+
+#right {
+    margin-right: 150px;
+    float: right;
+    text-align: center;
+}
+
+.loginContainer {
+    display: flex;
+}
+
+#logo {
+    width: 200px;
+}
+
+#logo2 {
+    width: 80%;
+}
+
+#line2 {
+    font-style: italic;
+    margin-top: -20px;
+    font-size: 18px;
+}
+
+/* #hint {
+    margin-left: 140px;
+    margin-right: 140px;
+} */
+
+
+#hint:hover {
+    cursor: pointer;
+}
+
+#popup {
+    display: none;
+    width: 90%;
+    margin-right: 10px;
+}
+
+#hint:hover + #popup {
+    cursor: pointer;
+    display: block;
+    background-color: #87CEEB;
+}
+
+.banner {
+    width: 105%;
+    display: inline-block;
+    background-color: #a6192e;
+    margin: -10px;
+    padding-top: 0px;
+    height: 56px;
+}
+
+#smallmq {
+    margin-left: 20px;
+    width: 200px;
+    height: 56px;
+    float: left;
+    background-color: #ffffff;
+}
+
+#smalluser {
+    float: left;
+    margin-left: 600px;
+    margin-right: 10px;
+    color: #ffffff;
+    margin-top: 18px;
+    font-size: 22px;
+}
+
+.logout {
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#leftButton {
+    margin-left: 20px;
+}
+
+
+#ilearn {
+    float: right;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 0px;
+    margin-right: 100px;
+}
+
+#i {
+    color: #a6192e;
+}
+
+.homecontainer {
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #dcd0c0;
+    background-color: #ffffff;
+}
+
+#user {
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    width: 93%;
+}
+
+#avatar {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+#name {
+    float: left;
+    margin-top: -5px;
+}
+
+#subjects {
+    margin-left: 20px;
+    width: 55%;
+    padding: 20px;
+}
+
+#hometitle {
+    margin-top: 0px;
+}
+
+.title {
+    font-size: 20px;
+    background-color: #f7f7f7;
+    border-radius:5px;
+    border: 2px solid #e2e2e2;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.subjectlist {
+    background-color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 40px;
+    border: 2px solid #e2e2e2;
+    margin-top: 10px;
+    margin-left: -22px;
+    width: 98.5%;
+}
+
+#subjectlink {
+    color: #a6192e;
+}
+
+#subjectlink:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#advert {
+    margin-right: 30px;
+    float: right;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+#description {
+    margin-left: -15px;
+}
+
+table {
+    margin-left: -20px;
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+th, td {
+    background-color: #ffffff;
+}
+
+table, th, td {
+    border: 2px solid #e2e2e2;
+    text-align: center;
+}
+
+.editGrade {
+    text-decoration: underline;
+    color: black;
+}
+
+.editGrade:hover {
+    color: #981e32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.editGradesPopup {
+    margin: 15% auto;
+    background-color: #ffffff;
+    padding: 20px;
+    width: 40%;
+    border: 2px solid #981e32;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.passwordInfo {
+    text-decoration: underline;
+    color: black;
+}
+
+.passwordInfo:hover {
+    color: #981e32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#flagPassword {
+    width: 90%;
+    padding: 16px;
+    border: 1px solid #dadfe3;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#flagPassword:focus {
+    outline-color: #a6192e;
+    outline-width: thin;
+    border: 2px solid;
+    border-color: rgba(214, 0, 28, .5);
+    margin-bottom: 8px;
+}
+
+
+#flagSubmit {
+    background-color: #a6192e;
+    padding: 10px;
+    width: 50%;
+    border: 1px solid #d06a60;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#flagSubmit:hover {
+    background-color: #d6001c;
+    cursor: pointer;
+}
+
+#success {
+    background-color: #68be36;
+
+}
+
+.congratulations {
+    text-align: center;
+    color: #ffffff;
+}
+
+#successTitle {
+    font-size: 50px;
+}
+
+#successParagraph {
+    margin-top: -30px;
+    font-size: 20px;
+}

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    category: web
+    challenge: this-seems-familiar
+  name: this-seems-familiar-web-service
+spec:
+  type: LoadBalancer
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+      clientIP:
+        timeoutSeconds: 3600
+  ports:
+    - name: "web"
+      port: 80
+      targetPort: 8000
+  selector:
+    category: web
+    challenge: this-seems-familiar

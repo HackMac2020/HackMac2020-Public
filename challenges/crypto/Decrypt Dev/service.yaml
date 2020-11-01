@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: decrypt-dev
+  labels:
+    category: crypto
+    challenge: decrypt-dev
+spec:
+  type: LoadBalancer
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+      clientIP:
+          timeoutSeconds: 3600
+  ports:
+    - name: "decrypt-dev-port"
+      port: 1337
+      targetPort: 1337
+  selector:
+    category: crypto
+    challenge: decrypt-dev

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: web
+    challenge: jwt1
+  name: jwt1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: web
+      challenge: jwt1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        category: web
+        challenge: jwt1
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - image: gcr.io/hackmac-challenges-2020-13337/jwt1:latest
+        imagePullPolicy: Always
+        name: jwt1-web
+        ports:
+        - containerPort: 1337 
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+      restartPolicy: Always
+      serviceAccountName: ""

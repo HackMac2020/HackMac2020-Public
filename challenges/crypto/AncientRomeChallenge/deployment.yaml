@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: crypto
+    challenge: ancient-rome
+  name: ancient-rome
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: crypto
+      challenge: ancient-rome
+  template:
+    metadata:
+      labels:
+        category: crypto
+        challenge: ancient-rome
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - name: web
+        image: gcr.io/hackmac-challenges-2020-13337/ancient-rome:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 1337
+        env:
+          - name: WORKER_PORT
+            value: "1337"
+        resources:
+          limits:
+            cpu: 100m
+            memory: 500Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+        labels:
+        volumes: null

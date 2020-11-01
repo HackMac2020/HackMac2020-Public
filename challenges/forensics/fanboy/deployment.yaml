@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: forensics
+    challenge: fanboy
+  name: fanboy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: forensics
+      challenge: fanboy
+  template:
+    metadata:
+      labels:
+        category: forensics
+        challenge: fanboy
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - image: gcr.io/hackmac-challenges-2020-13337/fanboy:latest
+        imagePullPolicy: Always
+        name: fanboy-web
+        ports:
+        - containerPort: 1337 
+        resources:
+          limits:
+            cpu: 100m
+            memory: 200Mi
+          requests:
+            cpu: 10m
+            memory: 100Mi
+      restartPolicy: Always
+      serviceAccountName: ""

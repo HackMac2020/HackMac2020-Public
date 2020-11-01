@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    category: crypto
+    challenge: decrypt-dev
+  name: decrypt-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: crypto
+      challenge: decrypt-dev
+  template:
+    metadata:
+      labels:
+        category: crypto
+        challenge: decrypt-dev
+    spec:
+      enableServiceLinks: false
+      automountServiceAccountToken: false
+      containers:
+      - name: decrypt-dev
+        image: gcr.io/hackmac-challenges-2020-13337/decrypt-dev:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 250m
+            memory: 300Mi
+          requests:
+            cpu: 50m
+            memory: 100Mi
+        securityContext:
+          privileged: true
+        ports:
+        - containerPort: 1337
+          name: port-1337

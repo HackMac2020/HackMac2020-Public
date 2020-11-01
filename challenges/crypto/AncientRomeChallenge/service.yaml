@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ancient-rome-service
+spec:
+  type: LoadBalancer
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+      clientIP:
+          timeoutSeconds: 3600
+  ports:
+    - name: "web"
+      port: 80
+      targetPort: 1337 
+  selector:
+    category: crypto
+    challenge: ancient-rome

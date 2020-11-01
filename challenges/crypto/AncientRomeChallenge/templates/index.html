@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF</title>
+    <META HTTP-EQUIV="refresh" CONTENT="15">
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>
+<script>
+
+
+    function startTimer() {
+        var duration = 14;
+        var timer = duration, seconds;
+        setInterval(function () {
+            seconds = parseInt(timer % 60, 10);
+
+            seconds = seconds < 10 ? + seconds : seconds;
+
+            document.getElementById("datetime").innerHTML = seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        startTimer();
+    };
+</script>
+<body>
+<div id="heading"><b>Encryption Challenge</b></div>
+<div id="paragraph">
+    <p>In this challenge, the encryption key changes every 15 seconds...<br>
+        So don't take too long to figure it out<br><br>
+    <p><span id="datetime"></span> seconds left!</p><br>
+        <b>The encrypted password is : {{ ciphertext }}</b><br><br>
+    </p>
+</div>
+<div id="answer">
+    <form action="" method="POST" name="decrypt">
+        <input placeholder="Your answer here" name="answer"><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div id="popup">
+    <p id="wanthint"><b>Want a hint?</b></p>
+    <p id="hint">"We should totally just stab Caesar!"</p>
+</div>
+
+
+</body>
+</html>

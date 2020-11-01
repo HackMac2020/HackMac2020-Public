@@ -1,0 +1,29 @@
+{
+    "name": "hackmac2020-challenges",
+    "version": "1.0.0",
+    "description": "nginx proxy bypass",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HackMac2020/HackMac2020-challenges.git"
+    },
+    "author": "Jordan Bertasso",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HackMac2020/HackMac2020-challenges/issues"
+    },
+    "homepage": "https://github.com/HackMac2020/HackMac2020-challenges#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "morgan": "^1.10.0",
+        "serve-index": "^1.9.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}

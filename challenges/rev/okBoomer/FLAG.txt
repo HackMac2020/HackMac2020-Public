@@ -1,0 +1,5 @@
+# Stage 1 flag : hackmac{ch_33ky_che_eky_fla_ggy}
+# Stage 2 flag : hackmac{h@_ck3r_@13_rt}
+# Stage 3 flag : hackmac{y0u_@re_@_Hak_ker!}
+# Stage 4 flag : hackmac{plz_d0n+_h@ck_m3}
+# Secret Stage flag : hackmac{c0n_grat_ula+10n5}

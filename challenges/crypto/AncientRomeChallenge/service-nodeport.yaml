@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ancient-rome-web-service
+spec:
+  type: NodePort
+  ports:
+  - name: "ancient-rome-nodeport"
+    port: 1337
+    targetPort: 1337
+    nodePort: 30106
+  selector:
+    category: crypto
+    challenge: ancient-rome

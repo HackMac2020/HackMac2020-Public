@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    category: web
+    challenge: this-seems-familiar
+  name: this-seems-familiar-web-service
+spec:
+  type: NodePort
+  ports:
+  - name: "this-seems-familiar-nodeport"
+    port: 8000
+    targetPort: 8000
+    nodePort: 30101
+  selector:
+    category: web
+    challenge: this-seems-familiar

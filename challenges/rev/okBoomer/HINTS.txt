@@ -1,0 +1,10 @@
+# Stage 1 - James- "Mate, those threads are fresh"
+            Dr. Evil- "You mean Strings?"
+
+# Stage 2 - Quick Math
+
+# Stage 3 - 1 is ok, 2 is a crowd but 3 is optimum.
+# Stage 4 - Ever heard of Bitwise AND and Buffer ?
+# Discovering Secret Stage - Take a closer look at stage 1 again.
+# Solving secret stage - Ever hear of a Roman Salad, look into it and a key of 5.
+
